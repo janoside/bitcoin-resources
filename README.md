@@ -9,3 +9,4 @@
 * https://jochen-hoenicke.de/queue/#2d - Visualization of fees
 * http://fork.lol/ - Monitoring of interactions between forks (Bitcoin and Bitcoin Cash, currently)
 * http://srv2.yogh.io/ - Stateless block explorer with valuable technical details
+* http://segwit.5gbfree.com/countsegwit.html# - Segwit adoption graph
