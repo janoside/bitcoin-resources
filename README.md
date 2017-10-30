@@ -14,3 +14,9 @@
 
 * http://segwit.5gbfree.com/countsegwit.html#
 * http://segwit.party/charts/
+
+### Segwit2X futures
+
+* https://www.bitfinex.com/order_book/bt2btc
+* https://hitbtc.com/B2X-to-BTC
+* https://www.okex.com/spot.html
