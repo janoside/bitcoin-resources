@@ -38,3 +38,5 @@ Copy content from [./files/bitcoin.conf](./files/bitcoin.conf) into /etc/bitcoin
     chown -R bitcoin:bitcoin /etc/bitcoin
     ln -s /home/bitcoin/bitcoin-0.15.1/bin/bitcoind /usr/bin/
     systemctl daemon-reload
+    systemctl enable bitcoind.service
+    systemctl start bitcoind.service
