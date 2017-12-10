@@ -7,7 +7,7 @@
     apt upgrade
 
 
-* Attach additional data volumes as needed. For scaleway see [here](https://www.scaleway.com/docs/attach-and-detach-a-volume-to-an-existing-server/#-Step-3--Format-the-additional-volume)
+Attach additional data volumes as needed. For scaleway see [here](https://www.scaleway.com/docs/attach-and-detach-a-volume-to-an-existing-server/#-Step-3--Format-the-additional-volume)
 
 
 
@@ -16,7 +16,7 @@
     mount /dev/nbd1 /mnt/data
 
 
-* Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,errors=remount-ro 0 2`
+Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,errors=remount-ro 0 2`
 
 
     wget https://bitcoin.org/bin/bitcoin-core-0.15.1/bitcoin-0.15.1-x86_64-linux-gnu.tar.gz
@@ -27,12 +27,12 @@
     chown -R bitcoin:bitcoin bitcoin-0.15.1/
 
 
-* Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoin.service
+Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoin.service
 
 
     mkdir /etc/bitcoin
 
-* Copy content from [./files/bitcoin.conf](./files/bitcoin.conf) into /etc/bitcoin/bitcoin.conf
+Copy content from [./files/bitcoin.conf](./files/bitcoin.conf) into /etc/bitcoin/bitcoin.conf
 
 
     chown -R bitcoin:bitcoin /etc/bitcoin
