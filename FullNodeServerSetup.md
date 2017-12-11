@@ -20,7 +20,7 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
     rm ./*.gz
     adduser bitcoin
     mv /root/bitcoin-0.15.1/ /home/bitcoin/
-    chown -R bitcoin:bitcoin bitcoin-0.15.1/
+    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.15.1/
 
 Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoin.service
 
