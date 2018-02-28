@@ -1,7 +1,7 @@
 ## Bitcoin Full Node Server Setup
 
 ### OS: Ubuntu 16.04
-### Bitcoin Version: 0.15.1
+### Bitcoin Version: 0.16.0
 
     apt update
     apt upgrade
