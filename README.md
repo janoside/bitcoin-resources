@@ -10,6 +10,7 @@
 * http://fork.lol/ - Monitoring of interactions between forks (Bitcoin and Bitcoin Cash, currently)
 * http://srv2.yogh.io/ - Stateless block explorer with valuable technical details
 * http://cryptomaps.org/
+* https://transactionfee.info/ and https://transactionfee.info/charts/
 
 ### SegWit adoption
 
