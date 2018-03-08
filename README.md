@@ -12,6 +12,7 @@
 * http://cryptomaps.org/
 * https://transactionfee.info/ and https://transactionfee.info/charts/
 * https://mempool.observer/
+* https://estimatefee.com/
 
 ### SegWit adoption
 
