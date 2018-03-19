@@ -13,14 +13,9 @@
 * https://transactionfee.info/ and https://transactionfee.info/charts/
 * https://mempool.observer/
 * https://estimatefee.com/
+* https://lnmainnet.gaben.win/
 
 ### SegWit adoption
 
 * http://segwit.5gbfree.com/countsegwit.html#
 * http://segwit.party/charts/
-
-### Segwit2X futures
-
-* https://www.bitfinex.com/order_book/bt2btc
-* https://hitbtc.com/B2X-to-BTC
-* https://www.okex.com/spot.html
