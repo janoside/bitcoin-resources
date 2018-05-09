@@ -22,7 +22,7 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
     mv /root/bitcoin-0.16.0/ /home/bitcoin/
     chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.16.0/
 
-Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoin.service
+Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoind.service
 
     mkdir /etc/bitcoin
 
