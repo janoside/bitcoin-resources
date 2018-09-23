@@ -1,7 +1,7 @@
 ## Bitcoin Full Node Server Setup
 
 ### OS: Ubuntu 16.04
-### Bitcoin Version: 0.16.0
+### Bitcoin Version: 0.16.3
 
     apt update
     apt upgrade
@@ -17,19 +17,20 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
 
     adduser bitcoin
     cd /home/bitcoin
-    wget https://bitcoin.org/bin/bitcoin-core-0.16.0/bitcoin-0.16.0-x86_64-linux-gnu.tar.gz
-    tar xzfv bitcoin-0.16.0-x86_64-linux-gnu.tar.gz
+    wget https://bitcoin.org/bin/bitcoin-core-0.16.3/bitcoin-0.16.3-x86_64-linux-gnu.tar.gz
+    tar xzfv bitcoin-0.16.3-x86_64-linux-gnu.tar.gz
     rm ./*.gz
-    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.16.0/
-
-Copy content from [https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service](https://github.com/bitcoin/bitcoin/blob/master/contrib/init/bitcoind.service) into /etc/systemd/system/bitcoind.service
-
+    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.16.3/
+    wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/init/bitcoind.service
+    mv bitcoind.service /etc/systemd/system/bitcoind.service
     mkdir /etc/bitcoin
+    wget https://raw.githubusercontent.com/janoside/bitcoin-resources/master/files/bitcoin.conf
+    mv bitcoin.conf /etc/bitcoin/
 
-Copy content from [./files/bitcoin.conf](./files/bitcoin.conf) into /etc/bitcoin/bitcoin.conf
+Edit `/etc/bitcoin/bitcoin.conf` as needed.
 
     chown -R bitcoin:bitcoin /etc/bitcoin
-    ln -s /home/bitcoin/bitcoin-0.16.0/bin/bitcoind /usr/bin/
+    ln -s /home/bitcoin/bitcoin-0.16.3/bin/bitcoind /usr/bin/
     mkdir /mnt/data/bitcoin
     chown -R bitcoin:bitcoin /mnt/data/bitcoin
     systemctl daemon-reload
