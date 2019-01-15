@@ -27,12 +27,8 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
     wget https://raw.githubusercontent.com/janoside/bitcoin-resources/master/files/bitcoin.conf
     mv bitcoin.conf /etc/bitcoin/
 
-
-Edit config as needed
-
+    # Edit config as needed
     vim /etc/bitcoin/bitcoin.conf
-
-
 
     chown -R bitcoin:bitcoin /etc/bitcoin
     ln -s /home/bitcoin/bitcoin-0.16.3/bin/bitcoind /usr/bin/
