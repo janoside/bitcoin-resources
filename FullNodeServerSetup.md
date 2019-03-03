@@ -20,7 +20,7 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
     wget https://bitcoin.org/bin/bitcoin-core-0.17.1/bitcoin-0.17.1-x86_64-linux-gnu.tar.gz
     tar xzfv bitcoin-0.17.1-x86_64-linux-gnu.tar.gz
     rm ./*.gz
-    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.16.3/
+    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.17.1/
     wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/init/bitcoind.service
     mv bitcoind.service /etc/systemd/system/bitcoind.service
     mkdir /etc/bitcoin
@@ -34,7 +34,7 @@ Edit config as needed
 Permissions
 
     chown -R bitcoin:bitcoin /etc/bitcoin
-    ln -s /home/bitcoin/bitcoin-0.16.3/bin/bitcoind /usr/bin/
+    ln -s /home/bitcoin/bitcoin-0.17.1/bin/bitcoind /usr/bin/
     mkdir /mnt/data/bitcoin
     chown -R bitcoin:bitcoin /mnt/data/bitcoin
 
