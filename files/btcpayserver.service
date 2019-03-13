@@ -1,0 +1,15 @@
+[Unit]
+Description=BtcPayServer daemon
+Requires=btcpayserver.service
+After=nbxplorer.service
+
+[Service]
+ExecStart=/usr/bin/dotnet run --no-launch-profile --no-build -c Release -p "/home/bitcoin/btcpayserver/BTCPayServer/BTCPayServer.csproj" -- $@
+User=root
+Group=root
+Type=simple
+PIDFile=/run/btcpayserver/btcpayserver.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
