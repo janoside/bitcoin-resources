@@ -37,3 +37,17 @@ Install (`wheel` prerequisite package installed first):
 
     pip3 install wheel
     pip3 install --user .
+
+
+### Electrum (macOS)
+
+Create AppleScript Application to launch Electrum.app in single-server "private mode" (only connects to your Electrum Personal Server instance):
+
+* Open Apple's "Script Editor"
+* New Document, type=Application, name=ElectrumPrivate
+* Paste text (testnet optional):
+
+    do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50002:s --testnet"
+
+* Save
+* Launch "ElectrumPrivate" app
