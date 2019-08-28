@@ -47,7 +47,7 @@ Create AppleScript Application to launch Electrum.app in single-server "private 
 * New Document, type=Application, name=ElectrumPrivate
 * Paste text (testnet optional):
 
-    do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50002:s --testnet"
+      do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50002:s --testnet"
 
 * Save
 * Launch "ElectrumPrivate" app
