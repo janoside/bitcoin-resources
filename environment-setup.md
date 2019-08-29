@@ -28,10 +28,11 @@ Ref: https://stadicus.github.io/RaspiBolt/raspibolt_64_electrum.html
     cd electrum-personal-server
     cp config.ini_sample config.ini
 
-Add your wallet master public keys or watch-only addresses to the `[master-public-keys]` and `[watch-only-addresses]` sections. Master public keys for an Electrum wallet can be found in the Electrum client menu `Wallet -> Information`.
+Add your wallet master public keys or watch-only addresses to the `[master-public-keys]` and `[watch-only-addresses]` sections. Master public keys for an Electrum wallet can be found in the Electrum client menu `Wallet -> Information`. Multisig (M-of-N) wallets should be entered in the form `M xpub1... xpub2... ... xpubN...`.
 
     wallet1 = xpub...
     wallet2 = xpub...
+    wallet3 = 2 xpub1... xpub2...
 
 Install (`wheel` prerequisite package installed first):
 
