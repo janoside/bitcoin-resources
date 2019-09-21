@@ -39,6 +39,10 @@ Install (`wheel` prerequisite package installed first):
     pip3 install wheel
     pip3 install --user .
 
+Run
+
+    nohup electrum-personal-server /path/to/electrum-personal-server/config.ini > eps.log &
+
 
 ### Electrum (macOS)
 
