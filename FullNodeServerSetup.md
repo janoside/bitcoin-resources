@@ -13,6 +13,28 @@ Attach additional data volumes as needed. For scaleway see [here](https://www.sc
     mkdir -p /mnt/data
     mount /dev/nbd1 /mnt/data
 
+Install tor proxy - [ref](https://itrendbuzz.com/install-tor-proxy-on-ubuntu/)
+
+    echo deb https://deb.torproject.org/torproject.org bionic main > /etc/apt/sources.list
+    echo deb-src https://deb.torproject.org/torproject.org bionic main >> /etc/apt/sources.list.d/tor.list
+    
+    curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
+    
+    gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+    
+    sudo apt update
+    sudo apt install tor deb.torproject.org-keyring
+    
+    which tor
+    # /usr/sbin/tor
+    
+    tor --version
+    # Tor version 0.4.1.5.
+    
+    /etc/init.d/tor start
+    # Tor proxy starts on 9050
+
+
 Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,errors=remount-ro 0 2`
 
     adduser bitcoin
