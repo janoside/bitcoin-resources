@@ -10,6 +10,9 @@
 2. Install and configured `Electrum Personal Server` (EPS)
 3. Configure "Private" Electrum wallet to communicate **only** with EPS.
 
+
+-----
+
 ### Goal 1: Bitcoin Core
 
 1. Before compiling Bitcoin Core, you'll need to install Berkeley DB 4.8:
@@ -23,6 +26,10 @@
         make install
     
 2. [Compile Bitcoin Core](https://bitzuma.com/posts/compile-bitcoin-core-from-source-on-ubuntu/)
+
+
+
+-----
 
 
 ### Goal 2: Electrum Personal Server (EPS)
@@ -53,6 +60,8 @@ This software provides a blockchain-data API to the Electrum wallet (hereafter "
 
         nohup electrum-personal-server /path/to/electrum-personal-server/config.ini > eps.log &
 
+
+-----
 
 ### Goal 3: Configure "Private" Electrum (macOS)
 
