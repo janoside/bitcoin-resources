@@ -4,7 +4,9 @@
 
 * Ubuntu 18.04 Server
 
-### Bitcoin Core Setup
+### Bitcoin Core setup
+
+**Goal**: Compile Bitcoin Core from source and start it.
 
 1. Before compiling Bitcoin Core, you'll need to install Berkeley DB 4.8:
 
@@ -20,6 +22,8 @@
 
 
 ### Electrum Personal Server
+
+**Goal**: Install and configured `Electrum Personal Server` (EPS). This software provides a blockchain-data API to the Electrum wallet (hereafter "Electrum") software that we'll install later. By default Electrum will connect to any number of public "Electrum Servers" which feed Electrum data but can, in doing so, spy on you and your data. EPS provides a compatible API that will only manage and serve *your* data.
 
 1. Install [source](https://stadicus.github.io/RaspiBolt/raspibolt_64_electrum.html)
 
@@ -48,7 +52,7 @@
 
 ### Electrum (macOS)
 
-Goal: Create AppleScript Application to launch Electrum.app in single-server "private mode" (only connects to your Electrum Personal Server instance):
+**Goal**: Create AppleScript Application to launch Electrum.app in single-server "private mode" (only connects to your Electrum Personal Server instance):
 
 1. Open Apple's "Script Editor"
 2. New Document, type=Application, name=ElectrumPrivate
