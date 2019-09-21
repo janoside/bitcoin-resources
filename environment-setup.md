@@ -1,12 +1,16 @@
 # Bitcoin Environment Setup
 
-### Prerequisites
+## Prerequisites
 
 * Ubuntu 18.04 Server
 
-### Bitcoin Core setup
+## Goals
 
-**Goal**: Compile Bitcoin Core from source and start it.
+1. Compile `Bitcoin Core` from source and start it
+2. Install and configured `Electrum Personal Server` (EPS)
+3. Configure "Private" Electrum wallet to communicate **only** with EPS.
+
+### Goal 1: Bitcoin Core
 
 1. Before compiling Bitcoin Core, you'll need to install Berkeley DB 4.8:
 
@@ -21,9 +25,9 @@
 2. [Compile Bitcoin Core](https://bitzuma.com/posts/compile-bitcoin-core-from-source-on-ubuntu/)
 
 
-### Electrum Personal Server
+### Goal 2: Electrum Personal Server (EPS)
 
-**Goal**: Install and configured `Electrum Personal Server` (EPS). This software provides a blockchain-data API to the Electrum wallet (hereafter "Electrum") software that we'll install later. By default Electrum will connect to any number of public "Electrum Servers" which feed Electrum data but can, in doing so, spy on you and your data. EPS provides a compatible API that will only manage and serve *your* data.
+This software provides a blockchain-data API to the Electrum wallet (hereafter "Electrum") software that we'll install later. By default Electrum will connect to any number of public "Electrum Servers" which feed Electrum data but can, in doing so, spy on you and your data. EPS provides a compatible API that will only manage and serve *your* data.
 
 1. Install [source](https://stadicus.github.io/RaspiBolt/raspibolt_64_electrum.html)
 
@@ -50,9 +54,11 @@
         nohup electrum-personal-server /path/to/electrum-personal-server/config.ini > eps.log &
 
 
-### Electrum (macOS)
+### Goal 3: Configure "Private" Electrum (macOS)
 
-**Goal**: Create AppleScript Application to launch Electrum.app in single-server "private mode" (only connects to your Electrum Personal Server instance):
+**Prerequisite**: Install Electrum for macOS.
+
+Now, to avoid privacy leaks associated with connecting to public Electrum servers, we create an AppleScript Application to launch Electrum.app in single-server "private mode". Launching Electrum via this AppleScript Application will configure it at launch to only connect to your EPS instance.
 
 1. Open Apple's "Script Editor"
 2. New Document, type=Application, name=ElectrumPrivate
@@ -61,4 +67,4 @@
        do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50002:s --testnet"
 
 4. Save
-5. Launch "ElectrumPrivate" app
+5. From now on, launch "ElectrumPrivate" app instead of "Electrum"
