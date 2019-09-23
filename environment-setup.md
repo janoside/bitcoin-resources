@@ -77,3 +77,36 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
 
 4. Save
 5. From now on, launch "ElectrumPrivate" app instead of "Electrum"
+
+
+-----
+
+### Goal 4: Configure ElectrumX Server
+
+1. Install
+
+        pip3 install plyvel
+        git clone https://github.com/kyuupichan/electrumx.git
+        cd electrumx
+        pip3 install .
+        cp contrib/systemd/electrumx.service /etc/systemd/system/
+
+2. Edit `electrumx.service`
+
+        ...
+        ExecStart=/path/to/electrumx/git/electrumx_server
+        User=yourusername
+        ...
+        
+3. Create config file `/etc/electrumx.conf` with the following contents:
+
+        COIN=BitcoinSegwit
+        DB_DIRECTORY=/path/to/data-dir/
+        DAEMON_URL=bitcoin-rpc-username:bitcoin-rpc-password@127.0.0.1
+        
+4. Start and monitor
+
+        systemctl daemon-reload
+        systemctl enable bitcoind.service   # start at boot
+        service electrumx start
+        journalctl -u electrumx -f
