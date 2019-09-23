@@ -103,6 +103,9 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
         COIN=BitcoinSegwit
         DB_DIRECTORY=/path/to/data-dir/
         DAEMON_URL=bitcoin-rpc-username:bitcoin-rpc-password@127.0.0.1
+        TOR_PROXY_HOST=127.0.0.1
+        PEER_DISCOVERY=self
+        PEER_ANNOUNCE=
         
 4. Start and monitor
 
