@@ -90,6 +90,7 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
         cd electrumx
         pip3 install .
         cp contrib/systemd/electrumx.service /etc/systemd/system/
+        mkdir /path/for/electrumx-data-dir
 
 2. Edit `electrumx.service`
 
@@ -97,8 +98,16 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
         ExecStart=/path/to/electrumx/git/electrumx_server
         User=yourusername
         ...
+
+3. Generate self-signed certificate (so Electrum wallet can connect over TLS):
+
+        cd /path/for/electrumx-data-dir
+        openssl genrsa -out server.key 2048
+        openssl req -new -key server.key -out server.csr
+        # leave everything blank if desired
+        openssl x509 -req -days 1825 -in server.csr -signkey server.key -out server.crt
         
-3. Create config file `/etc/electrumx.conf` with the following contents:
+4. Create config file `/etc/electrumx.conf`. Populate with [environment variables](https://electrumx.readthedocs.io/en/latest/environment.html):
 
         COIN=BitcoinSegwit
         DB_DIRECTORY=/path/to/data-dir/
@@ -106,8 +115,10 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
         TOR_PROXY_HOST=127.0.0.1
         PEER_DISCOVERY=self
         PEER_ANNOUNCE=
+        SSL_CERTFILE=/path/for/electrumx-data-dir/server.crt
+        SSL_KEYFILE=/path/for/electrumx-data-dir/server.key
         
-4. Start and monitor
+5. Start and monitor
 
         systemctl daemon-reload
         systemctl enable bitcoind.service   # start at boot
