@@ -81,7 +81,7 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
        # connect via tcp
        do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50001:t --testnet"
    
-   Note: Connecting via SSL to an ElectrumX server using a self-signed certificate isn't working for me. Since my ElectrumX server is on my home network, I just connect via TCP.
+   Note: Connecting via SSL to an ElectrumX server using a self-signed certificate, from Electrum running on macOS, isn't working for me - the issue may be related to python3's handling of self-signed certs?. Regardless, since my ElectrumX server is on my home network, I just connect via TCP.
 
 4. Save
 5. From now on, launch "ElectrumPrivate" app instead of "Electrum"
