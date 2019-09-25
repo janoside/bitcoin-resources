@@ -67,13 +67,21 @@ This software provides a blockchain-data API to the Electrum wallet (hereafter "
 
 **Prerequisite**: Install Electrum for macOS.
 
-Now, to avoid privacy leaks associated with connecting to public Electrum servers, we create an AppleScript Application to launch Electrum.app in single-server "private mode". Launching Electrum via this AppleScript Application will configure it at launch to only connect to your EPS instance.
+Now, to avoid privacy leaks associated with connecting to public Electrum servers, we create an AppleScript Application to launch Electrum.app in single-server "private mode". Launching Electrum via this AppleScript Application will configure it at launch to only connect to your ElectrumX or EPS instance.
 
 1. Open Apple's "Script Editor"
 2. New Document, type=Application, name=ElectrumPrivate
 3. Paste text (testnet optional):
-
+       
+       # connect via ssl
        do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50002:s --testnet"
+   
+   or
+        
+       # connect via tcp
+       do shell script "open -a /Applications/Electrum.app --args --oneserver --server 192.168.1.6:50001:t --testnet"
+   
+   Note: Connecting via SSL to an ElectrumX server using a self-signed certificate isn't working for me. Since my ElectrumX server is on my home network, I just connect via TCP.
 
 4. Save
 5. From now on, launch "ElectrumPrivate" app instead of "Electrum"
@@ -120,6 +128,7 @@ PS. To see debug output for Electrum on macOS:
         TOR_PROXY_HOST=127.0.0.1
         PEER_DISCOVERY=self
         PEER_ANNOUNCE=
+        SERVICES=tcp://:50001,ssl://:50002
         SSL_CERTFILE=/path/for/electrumx-data-dir/server.crt
         SSL_KEYFILE=/path/for/electrumx-data-dir/server.key
         
