@@ -78,6 +78,11 @@ Now, to avoid privacy leaks associated with connecting to public Electrum server
 4. Save
 5. From now on, launch "ElectrumPrivate" app instead of "Electrum"
 
+PS. To see debug output for Electrum on macOS:
+
+        cd /Applications/Electrum.app/Contents/MacOS/
+        ./Electrum --oneserver --server 192.168.1.6:50002:s -v=debug
+
 
 -----
 
