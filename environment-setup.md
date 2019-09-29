@@ -138,3 +138,24 @@ PS. To see debug output for Electrum on macOS:
         systemctl enable bitcoind.service   # start at boot
         service electrumx start
         journalctl -u electrumx -f
+        
+
+-----
+
+### Goal 5: Debug build of Electrum wallet on macOS
+
+1. Prerequisites
+
+        brew tap cuber/homebrew-libsecp256k1
+        brew install libsecp256k1
+        brew install pyqt5
+        brew install protobuf
+        brew upgrade protobuf
+
+2. Install
+
+        git clone git://github.com/spesmilo/electrum.git
+        cd electrum
+        git submodule update --init
+        pip3 install .
+        protoc --proto_path=electrum --python_out=electrum electrum/paymentrequest.proto
