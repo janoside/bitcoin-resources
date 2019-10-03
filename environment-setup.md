@@ -3,6 +3,11 @@
 ## Prerequisites
 
 * Ubuntu 18.04 Server
+* Disk space:
+    * Bitcoin Core: 290 GB at block 597,710
+    * ElectrumX: 42 GB at block 597,710
+    * Bitcoin Core (testnet): 28 GB at block 1,580,344
+    * ElectrumX (testnet): 4.6 GB at block 1,580,344
 
 ## Goals
 
