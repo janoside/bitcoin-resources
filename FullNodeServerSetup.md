@@ -1,7 +1,7 @@
 ## Bitcoin Full Node Server Setup
 
 ### OS: Ubuntu 18.04
-### Bitcoin Version: 0.18.1
+### Bitcoin Version: 0.19.0.1
 
     apt update
     apt upgrade
@@ -41,10 +41,10 @@ Open `/etc/fstab` and add the line `/dev/nbd1 /mnt/data auto  defaults,nofail,er
 
     adduser bitcoin
     cd /home/bitcoin
-    wget https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-x86_64-linux-gnu.tar.gz
-    tar xzfv bitcoin-0.18.1-x86_64-linux-gnu.tar.gz
+    wget https://bitcoin.org/bin/bitcoin-core-0.19.0.1/bitcoin-0.19.0.1-x86_64-linux-gnu.tar.gz
+    tar xzfv bitcoin-0.19.0.1-x86_64-linux-gnu.tar.gz
     rm ./*.gz
-    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.18.1/
+    chown -R bitcoin:bitcoin /home/bitcoin/bitcoin-0.19.0.1/
     wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/init/bitcoind.service
     mv bitcoind.service /etc/systemd/system/bitcoind.service
     mkdir /etc/bitcoin
@@ -58,7 +58,7 @@ Edit config as needed
 Permissions
 
     chown -R bitcoin:bitcoin /etc/bitcoin
-    ln -s /home/bitcoin/bitcoin-0.18.1/bin/bitcoind /usr/bin/
+    ln -s /home/bitcoin/bitcoin-0.19.0.1/bin/bitcoind /usr/bin/
     mkdir /mnt/data/bitcoin
     chown -R bitcoin:bitcoin /mnt/data/bitcoin
 
