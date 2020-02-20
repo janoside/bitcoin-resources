@@ -8,7 +8,7 @@
     * Bitcoin Core (testnet): 28 GB at block 1,580,344
     * ElectrumX (testnet): 4.6 GB at block 1,580,344
 
-## Goals
+## Tutorials
 
 1. [Build Bitcoin Core from Source](https://github.com/janoside/bitcoin-resources/wiki/Build-Bitcoin-Core-from-Source)
 2. [Run Electrum from Source on macOS](https://github.com/janoside/bitcoin-resources/wiki/Run-Electrum-from-source-on-macOS)
