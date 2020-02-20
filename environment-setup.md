@@ -162,5 +162,8 @@ PS. To see debug output for Electrum on macOS:
        git clone git://github.com/spesmilo/electrum.git
        cd electrum
        git submodule update --init
+       
+       # install coinkite colcard protocol for python3
+       pip3 install ckcc-protocol
        pip3 install .
        protoc --proto_path=electrum --python_out=electrum electrum/paymentrequest.proto
