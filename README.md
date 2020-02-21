@@ -16,6 +16,7 @@
 4. [Setup and Run ElectrumX Server](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-ElectrumX-Server)
 5. [Setup and Run Electrum Personal Server (EPS)](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-Electrum-Personal-Server-(EPS))
 6. [Bitcoin Core Server Setup](https://github.com/janoside/bitcoin-resources/wiki/Bitcoin-Core-Server-Setup)
+7. [BTCPayServer Setup](https://github.com/janoside/bitcoin-resources/wiki/BTCPayServer-Setup)
 
 
 ## Misc
