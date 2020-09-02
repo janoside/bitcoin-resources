@@ -3,10 +3,16 @@
 ## Misc info
 
 * Disk space usage
-    * Bitcoin Core: 290 GB at block 597,710
-    * ElectrumX: 42 GB at block 597,710
-    * Bitcoin Core (testnet): 28 GB at block 1,580,344
-    * ElectrumX (testnet): 4.6 GB at block 1,580,344
+    * Bitcoin Core
+        * 290 GB at block 597,710
+        * 337 GB at block 646,448
+    * ElectrumX
+        * 42 GB at block 597,710
+        * 55 GB at block 646,448
+    * Bitcoin Core (testnet)
+        * 28 GB at block 1,580,344
+    * ElectrumX (testnet)
+        * 4.6 GB at block 1,580,344
 
 ## Tutorials
 
