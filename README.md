@@ -10,13 +10,25 @@
 
 ## Tutorials
 
-1. [Build Bitcoin Core from Source](https://github.com/janoside/bitcoin-resources/wiki/Build-Bitcoin-Core-from-Source)
-2. [Run Electrum from Source on macOS](https://github.com/janoside/bitcoin-resources/wiki/Run-Electrum-from-source-on-macOS)
-3. [Configure "Private Electrum" on macOS](https://github.com/janoside/bitcoin-resources/wiki/Configure-%22Private-Electrum%22-on-macOS)
-4. [Setup and Run ElectrumX Server](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-ElectrumX-Server)
-5. [Setup and Run Electrum Personal Server (EPS)](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-Electrum-Personal-Server-(EPS))
-6. [Bitcoin Core Server Setup](https://github.com/janoside/bitcoin-resources/wiki/Bitcoin-Core-Server-Setup)
-7. [BTCPayServer Setup](https://github.com/janoside/bitcoin-resources/wiki/BTCPayServer-Setup)
+### Bitcoin Core
+
+* [Build Bitcoin Core from Source](https://github.com/janoside/bitcoin-resources/wiki/Build-Bitcoin-Core-from-Source)
+* [Bitcoin Core Setup on Ubuntu Server](https://github.com/janoside/bitcoin-resources/wiki/Bitcoin-Core-Setup-on-Ubuntu-Server)
+
+### Electrum and related
+
+* [Run Electrum from Source on macOS](https://github.com/janoside/bitcoin-resources/wiki/Run-Electrum-from-source-on-macOS)
+* [Configure "Private Electrum" on macOS](https://github.com/janoside/bitcoin-resources/wiki/Configure-%22Private-Electrum%22-on-macOS)
+* [Setup and Run ElectrumX Server](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-ElectrumX-Server)
+* [Setup and Run Electrum Personal Server (EPS)](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-Electrum-Personal-Server-(EPS))
+
+### BTCPay Server
+
+* [BTCPay Server Setup](https://github.com/janoside/bitcoin-resources/wiki/BTCPayServer-Setup)
+
+### Lightning
+
+* [LND Setup on Ubuntu Server](https://github.com/janoside/bitcoin-resources/wiki/LND-Setup-on-Ubuntu-Server)
 
 
 ## Misc
