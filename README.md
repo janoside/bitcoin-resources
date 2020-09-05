@@ -18,23 +18,23 @@
 
 ### Bitcoin Core
 
-* [Build Bitcoin Core from Source](https://github.com/janoside/bitcoin-resources/wiki/Build-Bitcoin-Core-from-Source)
-* [Bitcoin Core Setup on Ubuntu Server](https://github.com/janoside/bitcoin-resources/wiki/Bitcoin-Core-Setup-on-Ubuntu-Server)
+* [Build from Source](./wiki/Bitcoin-Core-Build-from-Source)
+* [Setup on Ubuntu Server](./wiki/Bitcoin-Core-Setup-on-Ubuntu)
 
 ### Electrum and related
 
-* [Run Electrum from Source on macOS](https://github.com/janoside/bitcoin-resources/wiki/Run-Electrum-from-source-on-macOS)
-* [Configure "Private Electrum" on macOS](https://github.com/janoside/bitcoin-resources/wiki/Configure-%22Private-Electrum%22-on-macOS)
-* [Setup and Run ElectrumX Server](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-ElectrumX-Server)
-* [Setup and Run Electrum Personal Server (EPS)](https://github.com/janoside/bitcoin-resources/wiki/Setup-and-run-Electrum-Personal-Server-(EPS))
+* [Build from Source on macOS](./wiki/Electrum-Build-from-source-on-macOS)
+* [Configure "Private Oneserver Mode" on macOS](./wiki/Electrum-Configure-Private-Oneserver-Mode-on-macOS)
+* [ElectrumX Setup](./wiki/ElectrumX-Setup-on-Ubuntu)
+* [Setup Electrum Personal Server (EPS)](./wiki/Electrum-Personal-Server-(EPS)-Setup)
 
 ### BTCPay Server
 
-* [BTCPay Server Setup](https://github.com/janoside/bitcoin-resources/wiki/BTCPayServer-Setup)
+* [BTCPay Server Setup](./wiki/BTCPayServer-Setup-on-Ubuntu)
 
 ### Lightning
 
-* [LND Setup on Ubuntu Server](https://github.com/janoside/bitcoin-resources/wiki/LND-Setup-on-Ubuntu-Server)
+* [LND Setup on Ubuntu](./wiki/LND-Setup-on-Ubuntu)
 
 
 ## Misc
