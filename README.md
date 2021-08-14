@@ -25,6 +25,7 @@
 
 * [Build from Source on macOS](https://github.com/janoside/bitcoin-resources/wiki/Electrum-Build-from-source-on-macOS)
 * [Configure "Private Oneserver Mode" on macOS](https://github.com/janoside/bitcoin-resources/wiki/Electrum-Configure-Private-Oneserver-Mode-on-macOS)
+* [Electrs Setup](https://github.com/janoside/bitcoin-resources/wiki/Electrs-Setup-on-Ubuntu)
 * [ElectrumX Setup](https://github.com/janoside/bitcoin-resources/wiki/ElectrumX-Setup-on-Ubuntu)
 * [Setup Electrum Personal Server (EPS)](https://github.com/janoside/bitcoin-resources/wiki/Electrum-Personal-Server-(EPS)-Setup)
 
