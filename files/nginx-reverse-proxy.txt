@@ -1,0 +1,45 @@
+
+server {
+	listen 80;
+	server_name bitcoinexplorer.org;
+
+	# used for LetsEncrypt challenges
+	location /.well-known/ {
+		root /var/www/html/;
+	}
+
+	location / {
+		return 301 https://$host$request_uri;
+	}
+}
+
+server {
+	listen 443 ssl;
+	server_name bitcoinexplorer.org;
+	add_header Strict-Transport-Security "max-age=31536000;";
+
+	# run:
+	# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
+	ssl_certificate			/etc/ssl/certs/selfsigned.crt;
+	ssl_certificate_key		/etc/ssl/private/selfsigned.key;
+	
+
+	ssl_session_cache	builtin:1000	shared:SSL:10m;
+	ssl_protocols	TLSv1.2 TLSv1.3;
+	ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+	ssl_prefer_server_ciphers on;
+	
+
+	location / {
+		proxy_pass			http://localhost:8000;
+
+		proxy_set_header	Host				$host;
+		proxy_set_header	X-Real-IP			$remote_addr;
+		proxy_set_header	X-Forwarded-For		$proxy_add_x_forwarded_for;
+		proxy_set_header	X-Forwarded-Proto	$scheme;
+		proxy_set_header	Upgrade				$http_upgrade;
+		proxy_set_header	Connection			'upgrade';
+
+		proxy_cache_bypass	$http_upgrade;
+	}
+}
